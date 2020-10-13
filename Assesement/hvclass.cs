@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Assesement
 {
-    class hvclass
+    public class hvclass
 
     {
 
@@ -31,6 +31,8 @@ namespace Assesement
                 Bullet = Bullet + 1;
             }
         }
+
+
         public void shootaway()
         {
             //if i have one chance
@@ -59,22 +61,28 @@ namespace Assesement
 
 
 
-        public void Spin()
+        public int Spin()
         {
             Random rand = new Random();
             Bullet = rand.Next(1, 5);
             MessageBox.Show("spinng");
+            return Bullet;
         }
 
 
-        public void WeaponLoad()
+        public int WeaponLoad()
         {
             Bullet = 0;
             MessageBox.Show("reloading");
+            return Bullet;
+
+
+
         }
 
     }
 }
+
 
 
 
